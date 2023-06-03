@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   
-  <title>Github多个帐号的ssh配置方法[施工中...] - Ackth X</title>
+  <title>Github多帐号的ssh key配置方法 - Ackth X</title>
   
     <link rel="shortcut icon" href="/favicon.png">
   
@@ -16,7 +16,7 @@
   
   
   
-  <meta property="og:title" content="Github多个帐号的ssh配置方法[施工中...] - Ackth X" />
+  <meta property="og:title" content="Github多帐号的ssh key配置方法 - Ackth X" />
   
   <meta property="og:type" content="article" />
   
@@ -150,13 +150,17 @@
         </div>
         
 
-        <h2 class="title">Github多个帐号的ssh配置方法[施工中...]</h2>
+        <h2 class="title">Github多帐号的ssh key配置方法</h2>
     </div>
 
     <div class="divider"></div>
 
     <div class="content">
-        
+        <h1 id="Github多帐号的ssh-key配置方法"><a href="#Github多帐号的ssh-key配置方法" class="headerlink" title="Github多帐号的ssh key配置方法"></a>Github多帐号的ssh key配置方法</h1><p>前段时间由于工作需要，额外注册了一个工作github帐号，但是个人帐号还得继续用，所以做了一些探索。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>首先，两个帐号肯定是不能共用一个key的，否则Github无法辨别你的身份，同时也会产生很多安全问题，所以初步上我们确定需要<em>创建两个ssh key</em>。</p>
+<p>其次，当本机和Github通信时，如何确定该使用哪个key？所以我们需要确定一个<em>规则</em>来让本机的ssh程序自动选择正确的key。</p>
+<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><p>首先，确定本机上有哪些key，哪些key是正在被使用的，以方便我们后面做调整：</p>
+
     </div>
 
     
