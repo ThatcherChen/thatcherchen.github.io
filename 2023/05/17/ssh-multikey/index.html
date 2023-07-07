@@ -162,7 +162,7 @@
 <h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><p>首先，由于本地已经有一个ssh key了，我们只需要再生成一个即可：</p>
 <p><code>ssh-keygen -t rsa -C &quot;Whatever you want to put here.&quot;</code></p>
 <p>ssh工具会提醒你在何处存放你的新key以及它们的口令，这里按照个人喜好设置就可以了。</p>
-<p>然后我们编辑___~&#x2F;.ssh&#x2F;config___（如果没有这个文件就创建一个），在其中加入两条规则，对应我们的两个账号：（这里的Host名可以根据自己的需要修改，为了方便可以改为自己容易记忆的词，因为之后我们每次使用git的时候需要指定Host）</p>
+<p>然后我们编辑~&#x2F;.ssh&#x2F;config（如果没有这个文件就创建一个），在其中加入两条规则，对应我们的两个账号：（这里的Host名可以根据自己的需要修改，为了方便可以改为自己容易记忆的词，因为之后我们每次使用git的时候需要指定Host）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Key of mine</span><br><span class="line">Host github_personal</span><br><span class="line">	HostName github.com</span><br><span class="line">	IdentityFile ~/.ssh/key_personal</span><br><span class="line"></span><br><span class="line"># Key of lab</span><br><span class="line">Host github_lab</span><br><span class="line">	HostName github.com</span><br><span class="line">	IdentityFile ~/.ssh/key_lab</span><br></pre></td></tr></table></figure>
 
 <p>这样下次使用git的时候指定是哪个Host就可以了，例如：</p>
